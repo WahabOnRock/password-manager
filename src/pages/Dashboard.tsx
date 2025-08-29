@@ -193,7 +193,7 @@ export default function Dashboard() {
         ))}
       </ul>
 
-      <style jsx>{`
+      <style>{`
         @media (min-width: 768px) {
           .add-form {
             grid-template-columns: 1fr 1fr 1fr auto auto !important;
