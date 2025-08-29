@@ -1,0 +1,110 @@
+:root {
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --primary: #4f46e5;
+  --primary-600: #4338ca;
+  --border: #e5e7eb;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root { height: 100%; }
+
+body {
+  margin: 0;
+  font-family: 'Nunito', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: var(--text);
+  background: var(--bg);
+}
+
+a { color: var(--primary); text-decoration: none; }
+a:hover { color: var(--primary-600); }
+
+h1, h2, h3 { margin: 0 0 12px; }
+h2 { font-size: 26px; font-family: 'Poppins', system-ui, Avenir, Helvetica, Arial, sans-serif; }
+
+button {
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  padding: 10px 16px;
+  font-size: 16px;
+  font-weight: 600;
+  background: var(--primary);
+  color: #fff;
+  cursor: pointer;
+  transition: background .2s ease;
+}
+button:hover { background: var(--primary-600); }
+button.secondary { background: #fff; color: var(--text); }
+
+input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  font-size: 16px;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+}
+
+.field-label {
+  background: #f3f4f6;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.field-box {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+
+.nav {
+  position: sticky;
+  top: 0;
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  z-index: 10;
+}
+.brand { font-weight: 800; font-size: 18px; }
+.nav a { margin-right: 12px; }
+
+.muted { color: var(--muted); font-weight: 600; }
+
+@media (max-width: 640px) {
+  body { font-size: 15px; }
+  h2 { font-size: 22px; }
+  .container { padding: 12px; }
+  .add-form { grid-template-columns: 1fr; gap: 10px; }
+  .item { flex-direction: column; align-items: stretch !important; }
+  .field-label, .field-box { padding: 6px 10px; border-radius: 6px; }
+  input { padding: 10px 12px; }
+  button { width: 100%; padding: 12px 14px; }
+}
